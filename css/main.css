@@ -1,8 +1,10 @@
+body {
+	color: #414648;
+}
+
 #mainB {
 	border-top: 1px solid rgb(41, 43, 44);  
 	border-bottom: 1px solid rgb(41, 43, 44); 
-	/*padding: 10px;*/
-	/*padding-bottom: 0;*/
 	background-color: #e4e4e4;  
 }
 

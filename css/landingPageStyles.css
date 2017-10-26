@@ -1,0 +1,163 @@
+/*-------------------------------*/
+/* BASIC SETUP */
+/*-------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/*-------------------------------*/
+/* WELCOME STYLES */
+/*-------------------------------*/
+
+h1 {
+    color: white;
+    font-weight: 300;
+    font-size: 280%;
+    word-spacing: -8px;
+    letter-spacing: -2px;
+}
+
+.main {
+    position: relative;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/landingPhoto-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/landingPhoto-min.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.welcome {
+    padding-top: 150px;
+    padding-left: 50px;
+}
+
+a {
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    color: white;
+    background-color: #e67e22;
+    border-radius: 20px;
+    padding: 8px 25px;
+    border: 0;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    display: inline-block;
+    color: #e67e22;
+    border: 1px solid #e67e22;
+    border-radius: 20px;
+    padding: 8px 25px;
+    transition: background-color 0.2s;
+    transition: color 0.2s;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    background-color: #e67e22;
+    color: white;
+}
+
+
+/*-------------------------------*/
+/* SIGN UP FORM */
+/*-------------------------------*/
+
+.new-user,
+.login {
+    display: none;
+    width: 35%;
+    margin: 0 auto;
+    background-color: beige;
+    border-radius: 20px;
+}
+
+form {
+    padding: 40px;
+    position: absolute;
+    top: 24%;
+    left: 34%;
+}
+
+form .row { margin-top: 10px; }
+
+.heading {
+    font-size: 125%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+label { 
+    color: #423c3c; 
+    font-size: 115%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+*:focus {
+    outline: none;
+}
+
+input[type=submit] {
+    font-size: 100%;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.sub { margin-top: 15px;}
+
+
+/*-------------------------------*/
+/* ANIMATIONS */
+/*-------------------------------*/
+
+.js-new-user.fadeIn {
+    display: block;
+    animation-duration: 1.5s;
+}
+
+.js-login.fadeIn {
+    display: block;
+    animation-duration: 1.5s;
+}
+
+.js-welcome.fadeOutDown { animation-duration: .5s; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
