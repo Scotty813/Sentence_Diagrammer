@@ -13,12 +13,12 @@
     </head>
     
     <body>
-      <!-- LOGIN -->
+      <!-- REGISTER USER -->
       <section class="main center">
-        <form class="login" action="login.php" method="post">
+        <form class="new-user" action="register.php" method="post">
             <div class="row">
                 <div class="col span-3-of-3 heading">
-                    <label>Login</label>
+                    <label>Choose Your Credentials</label>
                 </div>
             </div>
             <div class="row">
@@ -34,7 +34,15 @@
                     <label for="password">Password</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="text" name="password" id="password">
+                    <input type="text" name="password_1" id="password">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="password">Confirm Password</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="text" name="password_2" id="password">
                 </div>
             </div>
             <?php include('errors.php'); ?>
@@ -44,7 +52,7 @@
                 </div>
                 <div class="col span-2-of-3">
                     <a class="btn-ghost" href="../index.php">Back</a>
-                    <input type="submit" value="Submit" name="login_user" class="btn-full sub">
+                    <input type="submit" value="Submit" name="reg_user" class="btn-full sub">
                 </div>
             </div>
         </form>
@@ -52,5 +60,5 @@
     
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>         
     </body>
-  
+        
 </html>

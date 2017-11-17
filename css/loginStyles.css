@@ -28,12 +28,17 @@ h1 {
 }
 
 .main {
-    position: relative;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/landingPhoto-min.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/landingPhoto-min.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .welcome {
@@ -46,6 +51,10 @@ a {
     margin-right: 20px;
     cursor: pointer;
     text-decoration: none;
+}
+
+#errorRed {
+  color: #e31f1f;
 }
 
 .btn-full:link,
@@ -75,38 +84,32 @@ input[type=submit] {
     color: white;
 }
 
-
 /*-------------------------------*/
 /* SIGN UP FORM */
 /*-------------------------------*/
 
 .new-user,
 .login {
-    display: none;
-    width: 35%;
-    margin: 0 auto;
+    width: 40%;
     background-color: beige;
     border-radius: 20px;
 }
 
 form {
     padding: 40px;
-    position: absolute;
-    top: 24%;
-    left: 34%;
 }
 
 form .row { margin-top: 10px; }
 
-.heading {
-    font-size: 125%;
-    margin-top: 5px;
-    margin-bottom: 20px;
-}
-
 label { 
     color: #423c3c; 
-    font-size: 115%;
+    font-size: 100%;
+}
+
+.heading {
+    font-size: 150%;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 input[type=text] {
@@ -133,17 +136,7 @@ input[type=submit] {
 /* ANIMATIONS */
 /*-------------------------------*/
 
-.js-new-user.fadeIn {
-    display: block;
-    animation-duration: 1.5s;
-}
 
-.js-login.fadeIn {
-    display: block;
-    animation-duration: 1.5s;
-}
-
-.js-welcome.fadeOutDown { animation-duration: .5s; }
 
 
 

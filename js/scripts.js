@@ -36,7 +36,7 @@
     function loadMainL() {
       var mainLeft = $("#mainL");
       var images = "";
-      images += "<img src='mainSentence.jpg' id='mainSentence' draggable='true' ondragstart='drag(event)' value='1' style='width: 150px; height: 70px'><img src='modifier.jpg' id='modifier' draggable='true' value='2' ondragstart='drag(event)' style='width: 150px; height: 70px'>";
+      images += "<img src='img/mainSentence.jpg' id='mainSentence' draggable='true' ondragstart='drag(event)' value='1' style='width: 150px; height: 70px'><img src='img/modifier.jpg' id='modifier' draggable='true' value='2' ondragstart='drag(event)' style='width: 150px; height: 70px'>";
       return mainLeft.html(images);
     };
 
