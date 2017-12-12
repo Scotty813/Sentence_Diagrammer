@@ -34,7 +34,7 @@
                     <label for="password">Password</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="text" name="password" id="password">
+                    <input type="password" name="password" id="password">
                 </div>
             </div>
             <?php include('errors.php'); ?>

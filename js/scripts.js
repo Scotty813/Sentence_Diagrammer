@@ -16,18 +16,6 @@
     //focus on input when page loads
     $( document ).ready(function() {
       $( "#fname" ).focus();
-
-      $("button").mousedown(function() {
-        $(this).css('background-color', 'purple');
-      });
-
-      $("button").mouseup(function() {
-        $(this).css('background-color', '#025aa5');
-      });
-
-      $("button").mouseout(function() {
-        $(this).css('background-color', '#025aa5');
-      });
     });     //jQuery
 
     
@@ -122,11 +110,6 @@
     function displayDiagram() {
       loadMainL();
       loadMainR();
-
-      //jQuery to slide up buttons
-      $(".slidable").mousedown(function() {
-        $(this).slideUp("slow");
-      });
 
       //resets values after "Practice More" button is clicked at the end of program
       //No need for redundant code in resetAll function
