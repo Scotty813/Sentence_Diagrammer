@@ -1,26 +1,33 @@
-//declare global vars
+    //declare global vars
     var preConf = 5,
         preScore = 0,
         elDragged = 0;
-        maxScore = 0;
 
     var diagram = {sent: 0, adj: 0, adv: 0};
 
     var sentence = "Re34d'     Ro'!@ver        Bark,.ed   Loudly",
         words = [],
         proposal = ["", "", "", ""];
-
-    //scrubs sentence
+    
+    //scrubs out extra white space and punctuation from sentence
+    function convertSentence() {
+      sentence = sentence.replace(/ +/g, ' '); //takes out extra whitespace
+      words = sentence.split(" "); //cycles through each word in array and scrubs out punctuation
+      for (var i = 0; i < words.length; i++) {
+        words[i] = words[i].replace(/[^a-zA-Z]+/g,'');
+      };
+      sentence = words.join(" "); //place scrubbed words back into sentence string
+    };
+    
+    //uses regex to scrub sentence variable
     convertSentence();
 
     //focus on input when page loads
     $( document ).ready(function() {
       $( "#fname" ).focus();
-    });     //jQuery
+    });    
 
-    
-
-    //populates mainL
+    //populates left column
     function loadMainL() {
       var mainLeft = $("#mainL");
       var images = "";
@@ -28,7 +35,7 @@
       return mainLeft.html(images);
     };
 
-    //populates mainR
+    //populates right column
     function loadMainR() {
       var mainRight = $("#mainR");
       var buttons = "";
@@ -71,16 +78,6 @@
         return $mainB;
     };
 
-    //scrubs out extra white space and punctuation from sentence
-    function convertSentence() {
-      sentence = sentence.replace(/ +/g, ' '); //takes out extra whitespace
-      words = sentence.split(" "); //cycles through each word in array and scrubs out punctuation
-      for (var i = 0; i < words.length; i++) {
-        words[i] = words[i].replace(/[^a-zA-Z]+/g,'');
-      };
-      sentence = words.join(" "); //place scrubbed words back into sentence string
-    };
-
     //validates that score is between 1 and 100
     function validConf() {
       preScore = document.getElementById("preScore").value;
@@ -112,7 +109,6 @@
       loadMainR();
 
       //resets values after "Practice More" button is clicked at the end of program
-      //No need for redundant code in resetAll function
       for(var key in diagram) {  //cycles through diagram and resets all to 0
               diagram[key] = 0;
           }  
@@ -407,12 +403,6 @@
     };
 
     function resetAll() {
-          //**SEE COMMENTS IN DISPLAYDIAGRAM
-          // -----------------------------------
-          // for(var key in diagram) {  //cycles through diagram and resets all to 0
-          //     diagram[key] = 0;
-          // }  
-          // proposal = ["", "", "", ""]; //clears out proposal array
           $("#errorM").hide(); //jQuery
           return displayDiagram();
     };

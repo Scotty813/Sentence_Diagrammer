@@ -8,8 +8,8 @@ $errors = array();
 $_SESSION['success'] = "";
 
 // connect to database
-$db = mysqli_connect('mysql.yaacotu.com', 'sentdiagteam', 'ZujFR6gc', 'sentdiagdb');
-// $db = mysqli_connect('localhost', 'root', 'Drumline1', 'users');
+// $db = mysqli_connect('mysql.yaacotu.com', 'sentdiagteam', 'ZujFR6gc', 'sentdiagdb');
+$db = mysqli_connect('localhost', 'shorn', 'Drumline1!', 'sentdiagdb');
 
 // REGISTER USER
 if (isset($_POST['reg_user']))
@@ -59,6 +59,7 @@ if (isset($_POST['reg_user']))
 }
 
 // LOGIN USER
+
 if (isset($_POST['login_user']))
 {
     // receive all input values from the form
